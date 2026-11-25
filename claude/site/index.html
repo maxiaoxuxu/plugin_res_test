@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nccl · code-atlas</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="side">
+    <div class="brand"><a href="#/" id="brand">code-atlas</a><span id="proj"></span></div>
+    <div class="searchbox">
+      <input id="q" type="search" placeholder="搜索函数 / 结构体 / 类 / 宏 / 变量  ( / )" autocomplete="off">
+      <select id="kind"><option value="">全部</option><option value="f,m,k">函数</option><option value="s,c,u,e,t">类型</option><option value="d,n">宏/枚举值</option><option value="v">变量</option></select>
+    </div>
+    <div id="results" hidden></div>
+    <nav id="tree"></nav>
+    <div class="side-links"><a href="#/conc">线程 / 进程 / 通信</a></div>
+  </aside>
+  <main id="main"><div id="content">加载中…</div></main>
+</div>
+<script src="assets/boot.js"></script>
+<script src="data/meta.js"></script>
+<script src="data/search.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

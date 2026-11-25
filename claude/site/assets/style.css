@@ -1,0 +1,37 @@
+:root{--bg:#fff;--fg:#1f2430;--muted:#6b7280;--side:#f5f6f8;--bd:#dfe3ea;--accent:#2f6fed;--code:#f3f4f7;--ok:#1a7f4b;--warn:#b45309;
+--node-bg:#f4f7ff;--node-bd:#5b6b8a;--edge:#6b7280;--lbg:#fff;--hl:#fff3b0}
+@media (prefers-color-scheme:dark){:root{--bg:#14161b;--fg:#e6e8ee;--muted:#98a0ae;--side:#1b1e25;--bd:#2c313c;--accent:#7aa2ff;--code:#1e222b;--ok:#5fd39a;--warn:#f0b35a;
+--node-bg:#1f2736;--node-bd:#7b8bb0;--edge:#98a0ae;--lbg:#14161b;--hl:#4a4310}}
+*{box-sizing:border-box}html,body{margin:0;height:100%}body{background:var(--bg);color:var(--fg);font:14.5px/1.65 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}code,pre,.sig,.code{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+#app{display:flex;height:100vh}#side{width:340px;min-width:260px;background:var(--side);border-right:1px solid var(--bd);display:flex;flex-direction:column;overflow:hidden}
+#main{flex:1;overflow:auto}#content{max-width:1100px;margin:0 auto;padding:22px 30px 80px}
+.brand{padding:12px 14px 6px;font-weight:700}.brand #proj{margin-left:8px;color:var(--muted);font-weight:400;font-size:13px}
+.searchbox{display:flex;gap:6px;padding:6px 12px}.searchbox input{flex:1;padding:7px 9px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--fg)}
+.searchbox select{border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--fg)}
+#results,#tree{overflow:auto;flex:1;padding:4px 8px 12px}.side-links{padding:8px 14px;border-top:1px solid var(--bd)}
+#tree details{margin-left:10px}#tree summary{cursor:pointer;padding:1px 0}#tree summary a{color:var(--fg)}#tree .file{display:block;margin-left:22px;padding:1px 0;color:var(--muted);font-size:13.5px}
+#tree .cur{color:var(--accent);font-weight:600}
+.res{display:block;padding:6px 8px;border-radius:6px;color:var(--fg)}.res:hover{background:var(--code);text-decoration:none}.res .sigline{font:12px ui-monospace,Consolas,monospace;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.reslist .res{border-bottom:1px solid var(--bd);border-radius:0}.pad{padding:10px}
+.muted{color:var(--muted)}h1{font-size:24px;margin:.2em 0;word-break:break-all}h2{font-size:18px;margin:1.6em 0 .5em;padding-bottom:4px;border-bottom:1px solid var(--bd)}h3{font-size:15.5px;margin:1.2em 0 .4em}h4{font-size:14.5px}
+.sym-head{margin-bottom:10px}.sym-head .sub{color:var(--muted)}.sig{background:var(--code);padding:10px 12px;border-radius:8px;overflow:auto;margin:10px 0}
+.badge{display:inline-block;font-size:11.5px;padding:1px 7px;border-radius:10px;background:var(--code);color:var(--muted);border:1px solid var(--bd);vertical-align:middle}
+.k-function,.k-method,.k-kernel,.k-f,.k-m,.k-k{color:#2f6fed}.k-struct,.k-class,.k-union,.k-enum,.k-typedef,.k-s,.k-c,.k-u,.k-e,.k-t{color:#a24bd6}.k-macro,.k-d,.k-enumerator,.k-n{color:#c0661a}.k-variable,.k-v{color:#1a7f4b}
+.conf{font-size:12px;padding:0 6px;border-radius:8px;border:1px solid var(--bd)}.conf.ok{color:var(--ok)}.conf.warn{color:var(--warn)}.conf.dim{color:var(--muted)}
+.tablewrap{overflow-x:auto;margin:8px 0}table{border-collapse:collapse;width:100%}th,td{border:1px solid var(--bd);padding:5px 9px;text-align:left;vertical-align:top}th{background:var(--side);white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{background:var(--code);border:1px solid var(--bd);border-radius:12px;padding:0 9px;font:12.5px ui-monospace,Consolas,monospace}
+ul.cols{columns:2;column-gap:28px;padding-left:20px}blockquote{margin:10px 0;padding:6px 12px;border-left:3px solid var(--bd);color:var(--muted)}blockquote .lbl{font-size:12px;margin-right:6px}
+.note{background:color-mix(in srgb,var(--accent) 4%,transparent);border:1px solid var(--bd);border-radius:10px;padding:2px 18px 12px;margin:16px 0}.note h2{border:none;margin-top:12px}
+.note h3{border-left:3px solid var(--accent);padding-left:8px}.todo{background:var(--hl);padding:0 4px;border-radius:3px;color:var(--fg)}
+a.ev{font:12.5px ui-monospace,Consolas,monospace;background:var(--code);padding:0 5px;border-radius:4px;border:1px solid var(--bd)}a.ev.bad{color:#d33;border-color:#d33}
+pre{background:var(--code);padding:10px 12px;border-radius:8px;overflow:auto}pre.code{font-size:12.8px;line-height:1.5;white-space:pre}pre.code .ln{display:inline-block;min-width:46px;margin-right:12px;color:var(--muted);text-align:right;user-select:none}
+pre.code .ln.hl{background:var(--hl);color:var(--fg)}pre.big{max-height:none}.stats{display:flex;gap:14px;flex-wrap:wrap}.stats div{background:var(--code);border:1px solid var(--bd);border-radius:10px;padding:8px 16px;color:var(--muted)}.stats b{display:block;font-size:22px;color:var(--fg)}
+.diagram{overflow:auto;margin:12px 0;padding:10px;border:1px solid var(--bd);border-radius:10px;text-align:center}.diagram-err{color:var(--warn)}
+svg.mmd text{fill:var(--fg);font:13px -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+svg.mmd .mmd-node rect,svg.mmd .mmd-node polygon,svg.mmd .mmd-node ellipse{fill:var(--node-bg);stroke:var(--node-bd);stroke-width:1.3}svg.mmd .mmd-node line{stroke:var(--node-bd)}
+svg.mmd .mmd-edge{fill:none;stroke:var(--edge);stroke-width:1.3}svg.mmd .mmd-edge.dotted{stroke-dasharray:5 4}svg.mmd .mmd-edge.thick{stroke-width:2.4}svg.mmd .mmd-arrow{fill:var(--edge)}
+svg.mmd .mmd-lbg{fill:var(--lbg);opacity:.92}svg.mmd .mmd-elabel{font-size:12px}
+svg.mmd .mmd-cls-thread rect,svg.mmd .mmd-cls-async rect{stroke:#2f6fed}svg.mmd .mmd-cls-gpu rect{stroke:#1a7f4b}svg.mmd .mmd-cls-process rect{stroke:#c0661a}svg.mmd .mmd-cls-main rect{stroke:#a24bd6;stroke-width:2}
+@media (max-width:820px){#app{flex-direction:column;height:auto}#side{width:100%;max-height:50vh}#content{padding:14px}ul.cols{columns:1}}
